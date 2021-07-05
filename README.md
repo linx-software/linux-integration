@@ -1,31 +1,16 @@
 # Linux / Linx Integration
 
-## Overview
-
+## Description
 Using PuTTY (https://www.putty.org/) you can set up a complete management system in Linx to manage your Linux server / machine. The idea is to use 2 command-line tools provided by PuTTY to make the calls to the Linux machine.
 
-- plink.exe: used to make script or command calls on the Linux machine
-- pscp.exe: user to copy file to and from the Linux machine
-
-### Additional resources
-
-- Download PuTTY and install it on the same machine as your Linx Solution - https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-
-
-## Dependencies
-
+## Installation
 ### Pre-requisites
-
-- Linx Designer
-- PuTTY (Specifically, plink.exe and pscp.exe)
-
-### Linx Designer
-
-This solution was developed in the Linx Designer `v5.20.3.0`
+- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (Specifically, plink.exe and pscp.exe)
+    - plink.exe: used to make script or command calls on the Linux machine
+    - pscp.exe: user to copy file to and from the Linux machine
 
 
-## Setting up the sample
-
+### Register Linux machine signature
 **First Important step!** You need to register your Linux machine's signature on your Linx machine, in order for the commandline tools to work. To do this, follow these steps:
 
 1. Run the PuTTY Desktop app
@@ -34,7 +19,7 @@ This solution was developed in the Linx Designer `v5.20.3.0`
 1. PuTTY will ask whether you trust the host signature. Confirm it.
 1. Close PuTTY (Now your commandline tools will accept your Linux signature)
 
-Settings:
+### Configure Solution Settings.
 
 1. Open "LinuxManager.lsoz" in your Linx Designer
 1. Click on "Settings" and provide your details for each of the settings
@@ -45,8 +30,7 @@ Settings:
 - PSCPPath: The full path to the pscp.exe file
 
 
-## Using the sample
-
+## Usage
 
 ### Copy File From Linux
 Description: This function will allow you to copy a file from Linux to your Linx machine (Windows)
@@ -60,8 +44,6 @@ Usage:
 3. Click "Run"
 4. Your file should now be copied to your local path.
 
----
-
 ### Copy File To Linux
 Description: This function will allow you to copy a file from your local machine to your Linux machine.
 
@@ -74,8 +56,6 @@ Usage:
 3. Click "Run"
 4. Your file should now be copied to your Linux machine.
 
----
-
 ### Run Command on Linux
 Description: This function will allow you to run a Linux Command on the Linux Machine, and get the feedback as a Result.
 
@@ -86,8 +66,6 @@ Usage:
 - Command: This is the Linux Command you want to run on the Linux machine. (i.e. "ls /MyFolder" will list the files in the root folder called MyFolder) 
 3. Click "Run"
 4. The command will run on the Linux machine and you will be provided with the Result
-
----
 
 ### Run Script on Linux
 Description: To perform more complex commands on Linux, you can create a script file (.sh) on Linux and run it via this function. Included in this repo is a small script called "test.sh" to test this function with.
@@ -101,4 +79,10 @@ Usage:
 3. Click "Run"
 4. Your script will run and you will receive and outputted results from the script.
 
----
+## Contributing
+
+For questions please ask the [Linx community](https://linx/software/community) or use the [Slack channel](https://linxsoftware.slack.com/archives/C01FLBC1XNX). 
+
+## License
+
+[MIT](https://github.com/linx-software/template-repo/blob/main/LICENSE.txt)

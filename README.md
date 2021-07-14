@@ -5,6 +5,7 @@ Using PuTTY (https://www.putty.org/) you can set up a complete management system
 
 ## Installation
 ### Pre-requisites
+- Linx Designer at https://linx.software
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (Specifically, plink.exe and pscp.exe)
     - plink.exe: used to make script or command calls on the Linux machine
     - pscp.exe: user to copy file to and from the Linux machine
